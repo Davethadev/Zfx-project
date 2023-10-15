@@ -14,7 +14,7 @@ import { Withdrawals } from "./pages/Withdrawals";
 import { Sidebar } from "./components/Sidebar";
 import { Deposits } from "./pages/Deposits";
 import { Notifications } from "./pages/Notifications";
-import { Settings } from "./pages/Settings";
+import { Profile } from "./pages/Profile";
 import { UserProfile } from "./components/UserProfile";
 
 export default function App() {
@@ -38,11 +38,12 @@ function MainLayout() {
     "/withdrawals",
     "/deposits",
     "/notifications",
-    "/settings",
+    "/profile",
   ];
   const shouldRenderSidebarAndUserProfile = excludedPaths.some((path) =>
     location.pathname.includes(path)
   );
+
   return (
     <>
       <main className="flex">
@@ -59,7 +60,7 @@ function MainLayout() {
             <Route path="/withdrawals" element={<Withdrawals />} />
             <Route path="/deposits" element={<Deposits />} />
             <Route path="/notifications" element={<Notifications />} />
-            <Route path="/settings" element={<Settings />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgotpassword" element={<ForgotPassword />} />

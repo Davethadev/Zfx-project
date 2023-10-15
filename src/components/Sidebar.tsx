@@ -3,24 +3,23 @@ import { Group, Code } from "@mantine/core";
 import { Link } from "react-router-dom";
 import {
   IconBellRinging,
-  IconFingerprint,
-  IconKey,
   IconSettings,
-  Icon2fa,
-  IconDatabaseImport,
-  IconReceipt2,
   IconSwitchHorizontal,
   IconLogout,
+  IconLayoutDashboard,
+  IconCash,
+  IconWallet,
+  IconUser,
 } from "@tabler/icons-react";
 // import { MantineLogo } from "@mantine/ds";
 import classes from "../css/Sidebar.module.css";
 
 const data = [
-  { link: "/dashboard", label: "Dashboard", icon: IconReceipt2 },
-  { link: "/deposits", label: "Deposits", icon: IconFingerprint },
-  { link: "/withdrawals", label: "Withdrawals", icon: IconKey },
+  { link: "/dashboard", label: "Dashboard", icon: IconLayoutDashboard },
+  { link: "/profile", label: "Profile", icon: IconUser },
+  { link: "/deposits", label: "Deposits", icon: IconCash },
+  { link: "/withdrawals", label: "Withdrawals", icon: IconWallet },
   { link: "/notifications", label: "Notifications", icon: IconBellRinging },
-  { link: "/settings", label: "Settings", icon: IconSettings },
 ];
 
 export function Sidebar() {
@@ -42,7 +41,7 @@ export function Sidebar() {
   ));
 
   return (
-    <nav className={classes.navbar}>
+    <nav className={`hidden md:block ${classes.navbar}`}>
       <div className={classes.navbarMain}>
         <h1 className="text-white text-xl font-[500] my-4">Zfx</h1>
         {links}

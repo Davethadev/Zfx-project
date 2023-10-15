@@ -1,5 +1,4 @@
-import { Container, Flex, Paper, Text, Button, Stack } from "@mantine/core";
-import { IconCircleCheck } from "@tabler/icons-react";
+import { Container, Paper, Text, Button, Stack } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 export function Plans() {

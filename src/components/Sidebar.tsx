@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Group, Code } from "@mantine/core";
+
 import { Link } from "react-router-dom";
 import {
   IconBellRinging,
-  IconSettings,
   IconSwitchHorizontal,
   IconLogout,
   IconLayoutDashboard,
@@ -11,7 +10,7 @@ import {
   IconWallet,
   IconUser,
 } from "@tabler/icons-react";
-// import { MantineLogo } from "@mantine/ds";
+
 import classes from "../css/Sidebar.module.css";
 
 const data = [
